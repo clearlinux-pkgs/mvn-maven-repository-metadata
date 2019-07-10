@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-repository-metadata
 Version  : 2.0.6
-Release  : 1
+Release  : 2
 URL      : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom
@@ -21,8 +21,10 @@ Source11  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-met
 Source12  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom
 Source13  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar
 Source14  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom
-Source15  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
-Source16  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
+Source15  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.jar
+Source16  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.pom
+Source17  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
+Source18  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -89,11 +91,17 @@ cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.0
 cp %{SOURCE14} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.0
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
-cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9
+cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9
+cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
-cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
+cp %{SOURCE17} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
+cp %{SOURCE18} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
 
 
 %files
@@ -116,5 +124,7 @@ cp %{SOURCE16} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom
+/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.jar
+/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
