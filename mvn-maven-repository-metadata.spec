@@ -4,7 +4,7 @@
 #
 Name     : mvn-maven-repository-metadata
 Version  : 2.0.6
-Release  : 7
+Release  : 8
 URL      : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
 Source0  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
 Source1  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/2.0.1/maven-repository-metadata-2.0.1.jar
@@ -42,13 +42,13 @@ Source32  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-met
 Source33  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom
 Source34  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.jar
 Source35  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.pom
-Source36  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
-Source37  : https://repo1.maven.org/maven2/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
 Requires: mvn-maven-repository-metadata-data = %{version}-%{release}
 Requires: mvn-maven-repository-metadata-license = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 No detailed description available
@@ -185,12 +185,6 @@ cp %{SOURCE34} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9
 cp %{SOURCE35} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.pom
 
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
-cp %{SOURCE36} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
-
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0
-cp %{SOURCE37} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
-
 
 %files
 %defattr(-,root,root,-)
@@ -233,8 +227,6 @@ cp %{SOURCE37} %{buildroot}/usr/share/java/.m2/repository/org/apache/maven/maven
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.pom
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.jar
 /usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.3.9/maven-repository-metadata-3.3.9.pom
-/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.jar
-/usr/share/java/.m2/repository/org/apache/maven/maven-repository-metadata/3.6.0/maven-repository-metadata-3.6.0.pom
 
 %files license
 %defattr(0644,root,root,0755)
